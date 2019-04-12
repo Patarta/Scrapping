@@ -12,12 +12,14 @@ def crypto_scrapper
     page.xpath('//*[@class="text-left col-symbol"]').each do |symbol|
         symbols << symbol.text
     end
-
+puts symbols
+    
     prices = []
     page.xpath('//*[@class="price"]').each do |price|
         prices << price.text
     end
-
+puts prices
+    
     for i in (0...symbols.length) do
         cours_monnaies << {"#{symbols[i]}" => prices[i]}
     end
