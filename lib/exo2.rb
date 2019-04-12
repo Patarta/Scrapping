@@ -27,3 +27,4 @@ def deputy_list
     end
     return deputy_list
 end 
+puts deputy_list
